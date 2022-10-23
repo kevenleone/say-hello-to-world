@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Caveat+Brush");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#word-element:hover {
+  transform: scale(1) rotateX(360deg);
+  transition: all 0.3s ease-in-out;
+}
