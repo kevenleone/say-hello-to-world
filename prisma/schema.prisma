@@ -10,8 +10,19 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Example {
-  id        String   @id @default(cuid())
+model Vote {
+  id     String @id @default(uuid())
+  count  Int
+  userId Int
+
+  Word   Word?   @relation(fields: [wordId], references: [id])
+  wordId String?
+}
+
+model Word {
+  id        String   @id @default(uuid())
+  word      String
+  cloud     String
+  votes     Vote[]
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 }
