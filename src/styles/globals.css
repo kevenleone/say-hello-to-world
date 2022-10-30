@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  #word-element {
+    @apply mr-3 text-xl hover:bg-[#000];
+  }
+}
+
 #word-element:hover {
   transform: scale(1) rotateX(360deg);
   transition: all 0.3s ease-in-out;
