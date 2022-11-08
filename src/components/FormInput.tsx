@@ -20,7 +20,7 @@ const FormInput: React.FC<FormInputProps> = ({ refetch, path }) => {
     setTimeout(() => {
       refetch();
       setState("");
-    }, 100);
+    }, 1000);
   };
 
   return (
